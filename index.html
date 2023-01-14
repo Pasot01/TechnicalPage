@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <nav id="navbar">
+        <header>JavaScript<br />Les bases</header>
+        <ul>
+            <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+            <li>
+                <a class="nav-link" href="#Hello_world">Hello world</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Les_variables">Les variables</a>
+            </li>
+            <li><a class="nav-link" href="#Les_commentaires">Les commentaires</a></li>
+            <li><a class="nav-link" href="#Reference">Reference</a></li>
+        </ul>
+    </nav>
+
+    <main id="main-doc">
+
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <article>
+                <p>
+                    JavaScript est un langage de programmation qui ajoute de l'interactivité à votre site web (par
+                    exemple : jeux, réponses quand on clique sur un bouton ou des données entrées dans des formulaires,
+                    composition dynamique, animations). C'est un langage de programmation dynamique complet qui,
+                    appliqué à un document HTML, peut fournir une interactivité dynamique sur les sites Web. Il a été
+                    inventé par Brendan Eich, co-fondateur du projet Mozilla, de la Mozilla Foundation et de la Mozilla
+                    Corporation.
+                </p>
+
+                <p>
+                    JavaScript est d'une incroyable flexibilité. Vous pouvez commencer petit, avec des carrousels, des
+                    galeries d'images, des variations de mises en page et des réponses aux clics de boutons. Avec plus
+                    d'expérience, vous serez en mesure de créer des jeux, des graphiques 2D et 3D animés, des
+                    applications complètes fondées sur des bases de données et bien plus encore !<br />
+                    JavaScript est plutôt compact tout en étant très souple. Les développeurs ont écrit de nombreux
+                    outils sur le cœur du langage JavaScript, créant des fonctionnalités supplémentaires très
+                    simplement. Parmi ces outils, il y a :
+                </p>
+                <ul>
+                    <li>
+                        des Interfaces de Programmation d'Applications pour navigateurs (API) — API intégrées aux
+                        navigateurs web permettant de créer dynamiquement du HTML, de définir des styles de CSS, de
+                        collecter et manipuler un flux vidéo depuis la webcam de l'utilisateur ou de créer des
+                        graphiques 3D et des échantillonnages audio.
+                    </li>
+                    <li>
+                        des API tierces‑parties permettant aux développeurs d'incorporer dans leurs sites des
+                        fonctionnalités issues d'autres fournisseurs de contenu, comme Twitter ou Facebook.
+                    </li>
+                    <li>
+                        des modèles et bibliothèques tierces‑parties applicables à votre HTML permettant de mettre en
+                        œuvre rapidement des sites et des applications.
+                    </li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="main-section" id="Hello_world">
+            <header>Hello world</header>
+            <article>
+                <p>TPour commencer, nous allons vous montrer comment ajouter un JavaScript basique à votre page, en
+                    créant un exemple « Hello world ! »</p>
+
+                <ol>
+                    <li>
+                        Tout d'abord, allez sur votre site de test et créez un nouveau dossier nommé « scripts » (sans
+                        guillemets). Ensuite, dans le nouveau dossier scripts que vous venez de créer, créez un nouveau
+                        fichier appelé main.js. Sauvegardez-le dans votre dossier scripts.
+                    </li>
+                    <li>Ensuite, dans votre fichier index.html, ajoutez l'élément suivant sur une nouvelle ligne avant
+                        la balise fermante &lt;/body&gt; :
+                    </li>
+                    <pre><code>&lt;script src="scripts/main.js"&gt;&lt;/script&gt;</code></pre>
+                    <li>
+                        Cet élément a le même rôle que l'élément &lt;/link&gt; pour le CSS — il applique le code
+                        JavaScript à la page, de sorte qu'il puisse avoir de l'effet sur le HTML (en même temps que le
+                        CSS et autres sur la page).
+                    </li>
+                    <li>Maintenant ajoutez le code suivant dans main.js :
+                    </li>
+                    <pre><code>let myHeading = document.querySelector('h1');
+                        myHeading.textContent = 'hello world !';
+                        </code></pre>
+                    <li>Assurez-vous que les fichiers HTML et JavaScript soient enregistrés puis chargez index.html dans votre navigateur. Vous devriez normalement voir hello world s'afficher :</li>
+                </ol>
+            </article>
+        </section>
+
+        <section class="main-section" id="Les_variables">
+            <header>Les variables</header>
+            <article>
+                <p>
+                    Les variables sont des conteneurs dans lesquels on peut stocker des valeurs. Pour commencer, il faut déclarer une variable avec le mot-clé let en le faisant suivre de son nom :
+                </p>
+                <pre><code>let myVariable;
+                </code></pre>
+
+                <p>
+                    Une fois une variable déclarée, vous pouvez lui donner une valeur :
+                </p>
+                <pre><code>myVariable = 'Bob';
+                </code></pre>
+                <p>
+                    Vous pouvez faire les deux opérations sur une même ligne si vous le souhaitez :
+                </p>
+                <pre><code>let myVariable = 'Bob';
+                </code></pre>
+                <p>Vous retrouvez la valeur en appelant simplement la variable par son nom :</p>
+                <pre><code>myVariable;
+                </code></pre>
+                <p>Une fois qu'on a donné une valeur à une variable, on peut la changer plus loin :</p>
+                <pre><code>let myVariable = 'Bob';
+                    myVariable = 'Étienne';
+                    </code></pre>
+                <p>Notez que les variables peuvent contenir des types différents de données :</p>
+                <ul>
+                    <li>Chaînes de caractères</li>
+                    <p>Une suite de caractères connue sous le nom de chaîne. Pour indiquer que la valeur est une chaîne, il faut la placer entre guillemets.</p>
+                    <pre><code>let myVariable = 'Bob';</code></pre>
+                    <li>Nombre</li>
+                    <p>Un nombre. Les nombres ne sont pas entre guillemets.</p>
+                    <pre><code>let myVariable = 10;</code></pre>
+                    <li>Booléen</li>
+                    <p>Une valeur qui signifie vrai ou faux. true/false sont des mots-clés spéciaux en JS, ils n'ont pas besoin de guillemets.</p>
+                    <pre><code>let myVariable = true;</code></pre>
+                    <li>Tableau</li>
+                    <p>Une structure qui permet de stocker plusieurs valeurs dans une seule variable.</p>
+                    <pre><code>let myVariable = [1,'Bob','Étienne',10];</code></pre>
+                    <li>Objet</li>
+                    <p>À la base de toute chose. Tout est un objet en JavaScript et peut être stocké dans une variable. Gardez cela en mémoire tout au long de ce cours.</p>
+                    <pre><code>let myVariable = document.querySelector('h1');</code></pre>
+                    <p>Pourquoi a-t-on besoin de variables ? Et bien parce qu'elles sont essentielles à la programmation. Si les valeurs ne pouvaient pas changer, on ne pourrait rien faire de dynamique, comme personnaliser un message de bienvenue ou changer l'image affichée dans une galerie.</p>
+                </ul>
+            </article>
+        </section>
+
+        <section class="main-section" id="Les_commentaires">
+            <header>Les commentaires</header>
+            <article>
+                <p>Il est possible d'intégrer des commentaires dans du code JavaScript, de la même manière que dans les CSS :</p>
+                <pre><code>/*
+                    Tout ce qui est écrit ici est entre commentaires.
+                    */
+                    </code></pre>
+                <p>Si votre commentaire tient sur une ligne, vous pouvez utiliser deux barres obliques pour indiquer un commentaire :</p>
+                <pre><code>// Voici un commentaire
+                </code></pre>
+            </article>
+        </section>
+
+        <section class="main-section" id="Reference">
+            <header>Reference</header>
+            <article>
+                <p>Pour aller plus loin sur javascript et les opérateurs, les structures conditionnelles, les fonctions, les évènements et autres :</p>
+                <ul>
+                    <li>
+                        Apprendre le développement web > Les bases de JavaScript
+                        <a href="https://developer.mozilla.org/fr/docs/Learn/Getting_started_with_the_web/JavaScript_basics" target="_blank">MDN web docs</a>
+                    </li>
+                </ul>
+            </article>
+        </section>
+    </main>
+</body>
+
+</html>
